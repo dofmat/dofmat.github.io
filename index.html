@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Estimate It</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <style>
+    body {
+      background: white;
+      color: black;
+    }
+
+    #container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #content {
+      font-family: 'Roboto', sans-serif;
+      font-size: 6em;
+    }
+    </style>
+  </head>
+  <body>
+
+    <!-- 
+        C'est dans ce div qu'on va faire apparaître notre contenu ! 🧙
+    -->
+    <div id="container">
+      <span id="content">Waiting...</span>
+    </div>
+
+    <!-- 
+        Ca, c'est le fameux CAF SDK dont je parlais plus haut, c'est tout la logique de Google Cast en 1 ligne.
+    -->
+    <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+    
+    <!--
+        Et là, c'est notre receiver
+    -->
+    <script type="text/javascript">
+        window.onload = function () {
+          
+          /*
+             Le CastReceiverContext. 
+             En gros c'est notre point de liaison avec le CAF Framework, c'est à lui qu'on demande de bosser
+             Il gère les sessions, les app senders, l'envoie et réception de messages, et les event globaux. 
+          */
+          var ctx = cast.framework.CastReceiverContext.getInstance();
+          /*
+              Ca c'est nos settings/options. (Les namespaces, timeouts etc)
+              Pour en savoir plus: https://developers.google.com/cast/docs/reference/caf_receiver/cast.framework.CastReceiverOptions
+          */
+          var options = new cast.framework.CastReceiverOptions();
+          /*
+              Dans une app cast, le sender et le receiver communiquent, pour faire ça, ils passent par des canaux.
+              Il peut y en avoir plusieurs et de types différents.
+              Dans notre exemple, la sender app enverra des messages à la receiver app.
+              Ca sera fait via un Channel dont l’identifiant est écrit ci-dessous. Le type de messages est fixé plus bas.
+              Vous pouvez mettre ce que vous voulez en nom.
+              NDA: Si vous n'avez qu'un seul channel, la pratique courante est d'utiliser l’applicationId comme nom.
+              C'est ce que je fais ici
+          */
+          var CHANNEL = 'urn:x-cast:com.github.quentin7b.estimateit';
+
+          /*
+             Ici, on va définir les namespaces, notamment notre channel de communication qui sera en JSON
+             Comme vous le voyez, c'est un tableau, on peut donc en avoir plus d'un.
+             On ne le fera pas ici, mais pour plus d'info: https://developers.google.com/cast/docs/caf_receiver/core_features#custom_messages
+          */
+          options.customNamespaces = Object.assign({});
+          options.customNamespaces[CHANNEL] = cast.framework.system.MessageType.JSON;
+
+          /*
+              Finalement, ici, on va écouter les messages.
+              Depuis le context, on ajoute un custom listener sur le CHANNEL qu'on a créé et qui va lire nos messages.
+              Le but ici, afficher le contenu du message dans la <div id="content"><div> plus haut
+          */
+          ctx.addCustomMessageListener(CHANNEL, function(customEvent) {
+            var message = customEvent.data
+            console.log("Message received from " + 
+                        "[" +  customEvent.senderId +  "] " +
+                        ": " + message);
+            document.getElementById("content").innerHTML = message;
+          });
+
+          /*
+              On démarre tout ça et hop
+          */
+          ctx.start(options);
+        }
+    </script>
+  </body>
+</html>

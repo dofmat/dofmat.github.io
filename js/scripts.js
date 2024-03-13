@@ -1,6 +1,6 @@
 /*!
     * Start Bootstrap - Antonv Vinogradov Resume v1.0.0 (https://startbootstrap.com/template-overviews/resume)
-    * Copyright 2013-2020 Start Bootstrap
+    * Copyright 2013-2024 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/dofmat-resume/blob/master/LICENSE)
     */
     (function ($) {

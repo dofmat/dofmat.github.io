@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Антон Виноградов</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Включить навигацию"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,8 +29,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Опыт</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Образование</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Навыки</a></li>
-                    <!--li.nav-item-->
-                    <!--    a.nav-link.js-scroll-trigger(href='#interests') Интересы-->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Интересы</a></li>
                 </ul>
             </div>
         </nav>
@@ -48,15 +47,10 @@
                         <a href="mailto:dofmat@gmail.com">dofmat@gmail.com</a>
                     </div>
                     <p class="lead mb-5">Full-stack разработчик с 10 летним опытом. Могу работать как в команде, так и один, самостоятельно принимаю ответственные решения, отвечаю за результат, усидчив, не конфликтен.</p>
-                    <!--.social-icons-->
-                    <!--    a.social-icon(href='#')-->
-                    <!--        i.fab.fa-linkedin-in-->
-                    <!--    a.social-icon(href='#')-->
-                    <!--        i.fab.fa-github-->
-                    <!--    a.social-icon(href='#')-->
-                    <!--        i.fab.fa-twitter-->
-                    <!--    a.social-icon(href='#')-->
-                    <!--        i.fab.fa-facebook-f-->
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://github.com/dofmat"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/dofmat"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -66,8 +60,24 @@
                     <h2 class="mb-5">Опыт</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
+                            <h3 class="mb-0">Программист</h3>
+                            <div class="subheading mb-3"><a href="https://mediainstinctgroup.ru/">Media Instinct Group</a></div>
+                            <p>Работаю над несколькими разноплановыми проектами в составе различных команд. Использую React и Angular. Провожу код ревю. Являюсь наставником.</p>
+                            <p>Достижения:</p>
+                            <ul>
+                                <li class="mb-3">Финансовая система для планирования бюджетов ФОТ, накладных расходов. Так же предоставление аналитической информации руководителям.</li>
+                                <li class="mb-3">Реализация системы бронирования рабочих мест на карте офиса.</li>
+                                <li class="mb-3">Повышение заинтересованности сотрудников в корпоративном портале.</li>
+                                <li>Создание с нуля фронта для сервиса по digital аналитике.</li>
+                            </ul>
+                            <p>Вырос в компании с позиции линейного программиста до техлида.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2020 - н.в.</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
                             <h3 class="mb-0">Ведущий специалист по разработке программного обеспечения</h3>
-                            <div class="subheading mb-3">ГК "Промышленная безопасность" Москва, www.safety.ru</div>
+                            <div class="subheading mb-3"><a href="https://www.safety.ru/">ГК "Промышленная безопасность"</a></div>
                             <p>Организация работ по созданию, поддержке и обновлению коммерческого программного обеспечения. Создание сервисов на основе открытых данных Ростехнадзора. Внедрение внутренних локальных сервисов. За время работы были выполнены проекты различного уровня сложности:</p>
                             <ul>
                                 <li class="mb-3">Руководство группой разработчиков.</li>
@@ -108,7 +118,7 @@
                             <p>Помимо этого занимался поддержкой, развитием и модернизацией сайтов компании, используя Drupal, ImageCMS, CodeIgniter, OpenCart.</p>
                             <p>Вырос в компании с позиции системного администратора, на которой занимался текущей поддержкой сетевой инфраструктуры, сайтов и сотрудников компании. Сделал корпоративную систему заявок, чтобы снизить бумажные служебные записки.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2012 - по настоящее время</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2012 - 2020</span></div>
                     </div>
                     <!--.d-flex.flex-column.flex-md-row.justify-content-between.mb-5-->
                     <!--    .flex-grow-1-->
@@ -124,7 +134,7 @@
                             <div class="subheading mb-3">ООО Талланто</div>
                             <p>
                                 Поддержка корпоративного сайта на Drupal. Создал интерактивную ленту и карту, в которые поступает информация от клиентских CRM систем об актуальных занятиях (иностранные языки, живопись, танцы и т.п.)
-                                <a href="http://tallantocity.com/">http://tallantocity.com/</a>
+                                <a href="http://tallantocity.com/">tallantocity.com</a>
                             </p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2011 - 2012</span></div>
@@ -161,6 +171,13 @@
                     <h2 class="mb-5">Образование</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
+                            <h3 class="mb-0">ScrumTrek</h3>
+                            <div>Скрам-мастер</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
                             <h3 class="mb-0">Тренинговый центр Pentestit</h3>
                             <div>Курс по информационной безопасности «Zero Security»</div>
                         </div>
@@ -184,15 +201,14 @@
                     <div class="subheading mb-3">Языки программирования и Инструменты</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-php"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-laravel"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
                         <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-laravel"></i></li>
                         <li class="list-inline-item"><i class="fab fa-angular"></i></li>
                         <li class="list-inline-item"><i class="fab fa-vuejs"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
                         <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
                     </ul>
                     <ul class="fa-ul mb-0">
                         <li>
@@ -232,17 +248,16 @@
             </section>
             <hr class="m-0" />
             <!-- Interests-->
-            <!--section#interests.resume-section-->
-            <!--    .resume-section-content-->
-            <!--        h2.mb-5 Интересы-->
-            <!--        p-->
-            <!--            | Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.-->
-            <!--        p.mb-0-->
-            <!--            | When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.-->
-            <!---->
-            <!--hr.m-0-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Интересы</h2>
+                    <p>Читаю, играю в видео игры. Интересуюсь F1, ранее играл, а сейчас смотрю регби.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
         </div>
-        <!-- Bootstrap core JS-->
+
+        <!--Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->

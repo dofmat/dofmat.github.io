@@ -24,6 +24,8 @@ test('build creates a self-contained resume', () => {
     assert.match(html, /Technical Lead \/ Solution Architect/);
     assert.match(html, /Media Instinct Group/);
     assert.match(html, /2SkyMobile \/ Antwerp/);
+    assert.match(html, /<h2>Избранные<\/h2>/);
+    assert.doesNotMatch(html, /Outdoor-реклама/);
     assert.doesNotMatch(html, /\{\{[^}]+\}\}/);
     assert.doesNotMatch(html, /jquery|bootstrap|fontawesome/i);
     assert.ok(existsSync(join(outputDir, 'styles.css')));

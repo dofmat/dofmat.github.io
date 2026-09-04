@@ -128,7 +128,7 @@ function pageContent(resume) {
         <div class="contacts">${contacts}</div>
       </section>
       <section id="experience">${sectionPrompt('work --all', 'Опыт')}${experience(resume)}</section>
-      <section id="projects">${sectionPrompt('projects --selected', 'Выбранные проекты')}<div class="projects-grid">${projects(resume)}</div></section>
+      <section id="projects">${sectionPrompt('projects --selected', 'Избранные')}<div class="projects-grid">${projects(resume)}</div></section>
       <section id="skills">${sectionPrompt('stack --grouped', 'Стек и практики')}<div class="skills-grid">${skillGroups(resume)}</div></section>
       <section id="education">${sectionPrompt('education --list', 'Образование')}${education(resume)}
         <div class="languages"><h3>Языки</h3><p>${resume.languages.map(escapeHtml).join(' · ')}</p></div>

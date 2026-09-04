@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Антон Виноградов - Technical Lead / Solution Architect",
+    "description": "Резюме Антона Виноградова, Technical Lead / Solution Architect с опытом в e-commerce, telecom и корпоративных продуктах."
+  },
+  "profile": {
+    "name": "Антон Виноградов",
+    "handle": "dofmat",
+    "role": "Technical Lead / Solution Architect",
+    "location": "Москва · UTC+3",
+    "summary": "Технический лидер и full-stack инженер с 15+ годами опыта. Проектирую продуктовые системы, веду технические решения и остаюсь hands-on: от API и данных до frontend, CI/CD и production."
+  },
+  "contacts": [
+    { "label": "+7 916 296-96-77", "href": "tel:+79162969677" },
+    { "label": "dofmat@gmail.com", "href": "mailto:dofmat@gmail.com" },
+    { "label": "GitHub", "href": "https://github.com/dofmat" },
+    { "label": "Codewars", "href": "https://www.codewars.com/users/dofmat" }
+  ],
+  "experience": [
+    {
+      "company": "MirCli",
+      "url": "https://mircli.ru/",
+      "role": "Team Lead Full Stack",
+      "period": "апрель 2025 - настоящее время",
+      "current": true,
+      "parallel": false,
+      "summary": "Развиваю высоконагруженную e-commerce платформу климатической техники и отвечаю за технические решения от API до production.",
+      "highlights": [
+        "Развиваю backend на Laravel/PHP и Go, участвую в проектировании контрактов, данных и сервисных границ.",
+        "Работаю с каталогом, поиском, ценами, доставкой, заказами и интеграциями с внешними системами.",
+        "Сопровождаю production в Kubernetes, разбираю инциденты по Sentry, логам, метрикам, API и данным."
+      ],
+      "tags": ["PHP", "Go", "React", "PostgreSQL", "Redis", "Reindexer", "Kubernetes"]
+    },
+    {
+      "company": "2SkyMobile / Antwerp",
+      "role": "Technical Lead / Solution Architect",
+      "period": "2024-2026",
+      "current": false,
+      "parallel": true,
+      "summary": "Проектировал wholesale telecom-платформу и связывал продуктовые сценарии, сервисную архитектуру и внешних провайдеров.",
+      "highlights": [
+        "Вёл архитектуру backend и frontend для управления партнёрами, пользователями, eSIM/ICCID, пакетами и балансами.",
+        "Проектировал API-контракты, платёжные сценарии и адаптеры телеком-провайдеров.",
+        "Работал со сквозным потоком CDR ingestion/egestion, rating, Gy, SFTP и интеграционными тестами."
+      ],
+      "tags": [".NET", "Angular", "PostgreSQL", "Microservices", "CDR", "Gy", "Payments"]
+    },
+    {
+      "company": "Media Instinct Group",
+      "url": "https://mediainstinctgroup.ru/",
+      "role": "Technical Lead",
+      "period": "2020 - апрель 2025",
+      "current": false,
+      "parallel": false,
+      "summary": "Прошёл путь от разработчика до техлида. Разрабатывал внутренние продукты, проводил код-ревью, наставлял разработчиков и координировал технические решения.",
+      "highlights": [
+        "Работал одновременно с PHP backend и клиентскими приложениями на Angular и React.",
+        "Развивал общие frontend-модули и продуктовые интерфейсы для нескольких команд.",
+        "Помогал коллегам разбирать сложные задачи, выстраивать решения и доводить изменения до production."
+      ],
+      "tags": ["PHP", "Angular", "React", "TypeScript", "PostgreSQL", "Mentoring"]
+    },
+    {
+      "company": "ГК «Промышленная безопасность»",
+      "url": "https://www.safety.ru/",
+      "role": "Ведущий специалист по разработке ПО",
+      "period": "2012-2020",
+      "current": false,
+      "parallel": false,
+      "summary": "Организовывал разработку и поддержку коммерческого ПО, руководил группой разработчиков и создавал сервисы на основе открытых данных Ростехнадзора.",
+      "highlights": [
+        "Разработал реестры экспертиз, экспертов и аварий, а также расчётные сервисы промышленной безопасности.",
+        "Развивал цифровое отраслевое издание с полнотекстовым поиском и архивом более 20 000 статей.",
+        "Создал систему управления лицензиями семейства программ TOXI на аппаратных ключах Guardant."
+      ],
+      "tags": ["PHP", "Go", "MySQL", "Linux", "Team Lead"]
+    },
+    {
+      "company": "ООО «Талланто»",
+      "role": "Web-разработчик",
+      "period": "2011-2012",
+      "current": false,
+      "parallel": false,
+      "summary": "Поддерживал корпоративный сайт на Drupal и разработал интерактивную ленту и карту занятий с данными из клиентских CRM.",
+      "highlights": [],
+      "tags": ["PHP", "Drupal", "JavaScript"]
+    },
+    {
+      "company": "РХТУ им. Д. И. Менделеева",
+      "role": "Программист",
+      "period": "2010-2011",
+      "current": false,
+      "parallel": false,
+      "summary": "Разрабатывал базы данных и графические интерфейсы для хозяйственных договоров кафедры.",
+      "highlights": [],
+      "tags": ["Databases", "Desktop"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Afina",
+      "context": "Media Instinct",
+      "description": "Финансовая система для планирования ФОТ, бюджетов и накладных расходов. Поддерживает версии бюджетов, согласования, групповые бюджеты и аналитику для руководителей.",
+      "tags": ["PHP", "Angular", "PostgreSQL"]
+    },
+    {
+      "name": "Корпоративный портал",
+      "context": "Media Instinct",
+      "description": "Бронирование рабочих мест и переговорных, интерактивные карты офиса и интеграция календарей с Outlook. Развивал продукт и backend/frontend до последнего месяца работы в компании.",
+      "tags": ["PHP", "Angular", "Outlook"]
+    },
+    {
+      "name": "Outdoor-реклама",
+      "context": "Media Instinct",
+      "description": "Партнёрский центр и реестр адресных программ: карты, адресные объекты, согласования и операционные интерфейсы для размещения наружной рекламы.",
+      "tags": ["React", "Maps", "Workflows"]
+    },
+    {
+      "name": "Аналитические продукты",
+      "context": "Media Instinct",
+      "description": "Развивал интерфейсы телевизионной и цифровой аналитики. Для одного из сервисов создал frontend с нуля.",
+      "tags": ["Angular", "TypeScript", "Charts"]
+    },
+    {
+      "name": "Wholesale telecom platform",
+      "context": "2SkyMobile / Antwerp",
+      "description": "Набор сервисов для партнёрской работы с eSIM: управление каталогом и пакетами, биллинг, provider adapters, CDR/rating, Gy и эксплуатационные интеграции.",
+      "tags": [".NET", "Angular", "Telecom"]
+    }
+  ],
+  "skills": [
+    { "name": "Backend", "items": ["PHP", "Laravel", "Go", ".NET", "REST API", "Background jobs"] },
+    { "name": "Frontend", "items": ["TypeScript", "React", "Angular", "HTML", "CSS"] },
+    { "name": "Data", "items": ["PostgreSQL", "MySQL", "Redis", "Reindexer"] },
+    { "name": "Production", "items": ["Kubernetes", "Docker", "GitLab CI", "GitHub Actions", "Sentry", "Loki", "Linux"] },
+    { "name": "Leadership", "items": ["Solution architecture", "Code review", "Mentoring", "Technical roadmap", "Incident analysis"] }
+  ],
+  "education": [
+    { "school": "ScrumTrek", "program": "Скрам-мастер", "period": "2024" },
+    { "school": "Pentestit", "program": "Zero Security", "period": "2015" },
+    { "school": "РХТУ им. Д. И. Менделеева", "program": "Инженер, информационные технологии и управление", "period": "2006-2011" }
+  ],
+  "languages": ["Русский - родной", "Английский - Upper Intermediate"],
+  "interests": "Читаю, слежу за Formula 1 и регби, играю в видеоигры."
+}

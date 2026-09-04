@@ -4,8 +4,9 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 
-const projectRoot = new URL('../', import.meta.url).pathname.slice(1);
+const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 
 test('build creates a self-contained resume', () => {
   const outputDir = mkdtempSync(join(tmpdir(), 'dofmat-resume-'));

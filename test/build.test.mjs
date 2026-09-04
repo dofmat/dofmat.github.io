@@ -23,7 +23,8 @@ test('build creates a self-contained resume', () => {
     const html = readFileSync(join(outputDir, 'index.html'), 'utf8');
     assert.match(html, /Technical Lead \/ Solution Architect/);
     assert.match(html, /Media Instinct Group/);
-    assert.match(html, /2SkyMobile \/ Antwerp/);
+    assert.match(html, /2SkyMobile/);
+    assert.doesNotMatch(html, /Antwerp/);
     assert.match(html, /<h2>Избранные<\/h2>/);
     assert.match(html, /Сервис доставки/);
     assert.match(html, /XML- и YML-фиды/);

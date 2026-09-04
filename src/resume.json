@@ -33,7 +33,7 @@
       "tags": ["PHP", "Go", "React", "PostgreSQL", "Redis", "Reindexer", "Kubernetes"]
     },
     {
-      "company": "2SkyMobile / Antwerp",
+      "company": "2SkyMobile",
       "role": "Technical Lead / Solution Architect",
       "period": "2024-2026",
       "current": false,
@@ -138,7 +138,7 @@
     },
     {
       "name": "Wholesale-платформа",
-      "context": "2SkyMobile / Antwerp",
+      "context": "2SkyMobile",
       "description": "Платформа для работы партнёров с eSIM. Партнёры управляли в ней eSIM, каталогом и пакетами. Я работал над биллингом, интеграциями с провайдерами, CDR, rating и Gy.",
       "tags": [".NET", "Angular", "Telecom"]
     }

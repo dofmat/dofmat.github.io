@@ -54,7 +54,7 @@ The test imports `build` and `escapeHtml`, builds into a temporary directory, an
 ```js
 assert.match(html, /Technical Lead/);
 assert.match(html, /Media Instinct Group/);
-assert.match(html, /2SkyMobile \/ Antwerp/);
+assert.match(html, /2SkyMobile/);
 assert.doesNotMatch(html, /\{\{[^}]+\}\}/);
 assert.doesNotMatch(html, /jquery|bootstrap|fontawesome/i);
 assert.equal(escapeHtml('<script>'), '&lt;script&gt;');
@@ -93,7 +93,7 @@ Top-level fields:
 }
 ```
 
-Populate it with the approved chronology and copy from the design specification. Mark 2SkyMobile / Antwerp as a parallel project and MirCli as current.
+Populate it with the approved chronology and copy from the design specification. Mark 2SkyMobile as a parallel project and MirCli as current.
 
 - [ ] **Step 2: Add the semantic document template**
 

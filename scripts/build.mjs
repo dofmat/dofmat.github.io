@@ -52,7 +52,7 @@ function experience(resume) {
     const company = item.url
       ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.company)}</a>`
       : escapeHtml(item.company);
-    const flags = [item.current ? '<span class="status">работаю сейчас</span>' : '', item.parallel ? '<span class="parallel">параллельный проект</span>' : ''].join('');
+    const flags = [item.current ? '<span class="status">работаю сейчас</span>' : '', item.parallel ? '<span class="parallel">параллельно</span>' : ''].join('');
     const highlights = item.highlights.length
       ? `<ul class="highlights">${item.highlights.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul>`
       : '';
@@ -129,7 +129,7 @@ function pageContent(resume) {
       </section>
       <section id="experience">${sectionPrompt('work --all', 'Опыт')}${experience(resume)}</section>
       <section id="projects">${sectionPrompt('projects --selected', 'Избранные')}<div class="projects-grid">${projects(resume)}</div></section>
-      <section id="skills">${sectionPrompt('stack --grouped', 'Стек и практики')}<div class="skills-grid">${skillGroups(resume)}</div></section>
+      <section id="skills">${sectionPrompt('stack --grouped', 'Стек')}<div class="skills-grid">${skillGroups(resume)}</div></section>
       <section id="education">${sectionPrompt('education --list', 'Образование')}${education(resume)}
         <div class="languages"><h3>Языки</h3><p>${resume.languages.map(escapeHtml).join(' · ')}</p></div>
       </section>
@@ -156,6 +156,7 @@ export async function build({ outputDir = defaultOutputDir, dataPath = join(proj
   const output = safeOutputPath(outputDir);
   const templatePath = join(projectRoot, 'src', 'templates', 'index.html');
   const stylePath = join(projectRoot, 'src', 'styles', 'terminal.css');
+  const navigationPath = join(projectRoot, 'src', 'scripts', 'navigation.js');
   const profilePath = join(projectRoot, 'src', 'assets', 'img', 'profile.jpg');
   const faviconPath = join(projectRoot, 'src', 'assets', 'img', 'favicon.ico');
   const [template, resumeSource, styles] = await Promise.all([
@@ -180,6 +181,7 @@ export async function build({ outputDir = defaultOutputDir, dataPath = join(proj
   await Promise.all([
     writeFile(join(output, 'index.html'), html),
     writeFile(join(output, 'styles.css'), styles),
+    copyFile(navigationPath, join(output, 'navigation.js')),
     copyFile(profilePath, join(output, 'assets', 'img', 'profile.jpg')),
     copyFile(faviconPath, join(output, 'assets', 'img', 'favicon.ico')),
   ]);

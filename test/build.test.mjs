@@ -25,12 +25,29 @@ test('build creates a self-contained resume', () => {
     assert.match(html, /Media Instinct Group/);
     assert.match(html, /2SkyMobile \/ Antwerp/);
     assert.match(html, /<h2>Избранные<\/h2>/);
+    assert.match(html, /Сервис доставки/);
+    assert.match(html, /XML- и YML-фиды/);
+    assert.match(html, /Каталог и поиск/);
+    assert.match(html, /техлид/);
+    assert.match(html, /тимлид/);
+    assert.doesNotMatch(html, /техническ(?:ий|им) лидер|production/i);
+    assert.doesNotMatch(html, /Пишу backend|На frontend|frontend-модули|Frontend одного/);
     assert.doesNotMatch(html, /Outdoor-реклама/);
     assert.doesNotMatch(html, /\{\{[^}]+\}\}/);
     assert.doesNotMatch(html, /jquery|bootstrap|fontawesome/i);
+    assert.match(html, /<script src="navigation\.js" defer><\/script>/);
     assert.ok(existsSync(join(outputDir, 'styles.css')));
+    assert.ok(existsSync(join(outputDir, 'navigation.js')));
     assert.ok(existsSync(join(outputDir, 'assets', 'img', 'profile.jpg')));
     assert.ok(existsSync(join(outputDir, 'assets', 'img', 'favicon.ico')));
+
+    const navigation = readFileSync(join(outputDir, 'navigation.js'), 'utf8');
+    assert.match(navigation, /IntersectionObserver/);
+    assert.match(navigation, /aria-current/);
+
+    const styles = readFileSync(join(outputDir, 'styles.css'), 'utf8');
+    assert.match(styles, /\.portrait\s*{[^}]*aspect-ratio:\s*1\s*\/\s*1/s);
+    assert.doesNotMatch(styles, /content:\s*['"]>['"]/);
   } finally {
     rmSync(outputDir, { recursive: true, force: true });
   }

@@ -15,6 +15,7 @@
 - `src/resume.json`: all editable resume content and navigation labels.
 - `src/templates/index.html`: document shell and build placeholders.
 - `src/styles/terminal.css`: the complete terminal editorial theme, responsive rules, accessibility states, and print rules.
+- `src/scripts/navigation.js`: dependency-free scroll spy for desktop and mobile navigation.
 - `src/assets/img/profile.jpg`: the user-supplied portrait.
 - `src/assets/img/favicon.ico`: existing favicon.
 - `scripts/build.mjs`: validation, HTML escaping, section rendering, and copying to `dist/`.
@@ -226,3 +227,56 @@ Serve `dist/` locally and verify desktop, 390 px, and 320 px views; keyboard nav
 - [ ] **Step 4: Review the final diff**
 
 Confirm no secret, `.env`, SSH key, generated `dist/`, or unrelated file is included. Do not commit or push without a separate explicit request.
+
+### Task 7: Rewrite the copy and add scroll spy
+
+**Files:**
+- Modify: `src/resume.json`
+- Modify: `src/templates/index.html`
+- Modify: `src/styles/terminal.css`
+- Modify: `scripts/build.mjs`
+- Create: `src/scripts/navigation.js`
+- Modify: `test/build.test.mjs`
+
+- [ ] **Step 1: Write failing content and build-contract tests**
+
+Assert that the generated page uses «техлид» and «тимлид», does not contain «технический лидер» or `production`, loads `navigation.js`, and copies the script into the output directory.
+
+- [ ] **Step 2: Rewrite all public copy**
+
+Keep the first-person voice of the original resume. Use short, concrete sentences, familiar developer terminology, and only facts already present in the repository or confirmed by the user. Rename skill groups to «Данные и хранилища», «Инфраструктура», and «Техлид».
+
+- [ ] **Step 3: Add the native scroll spy**
+
+Observe the five navigable sections with `IntersectionObserver`. Set `aria-current="location"` on every desktop and mobile link whose hash matches the current section. Start from the URL hash or `about`.
+
+- [ ] **Step 4: Add active navigation styles**
+
+Use the existing green status color for the active item. Add a non-color marker in the sidebar and an underline in the mobile menu. Keep the existing pink hover and focus states.
+
+- [ ] **Step 5: Verify**
+
+Run `npm test`, `npm run build`, and `git diff --check`. In the browser, scroll through the page and confirm that both navigation copies track the current section without console errors.
+
+### Task 8: Add MirCli projects and square portrait
+
+**Files:**
+- Modify: `src/resume.json`
+- Modify: `src/styles/terminal.css`
+- Modify: `test/build.test.mjs`
+
+- [ ] **Step 1: Add failing checks**
+
+Assert that the build contains the MirCli delivery service, XML/YML feeds, catalog/search, and a square portrait rule.
+
+- [ ] **Step 2: Add evidence-backed project copy**
+
+Describe the separate delivery service, the parallel feed pipeline, and the Go/Reindexer catalog in short first-person copy based on the implementation and commit history.
+
+- [ ] **Step 3: Make the displayed portrait square**
+
+Keep the source image intact. Use `aspect-ratio: 1 / 1` and `object-fit: cover`, with the focal point adjusted to keep the face in frame.
+
+- [ ] **Step 4: Verify**
+
+Run `npm test`, `npm run build`, and `git diff --check`. Check the portrait, project cards, and scroll spy in the browser.

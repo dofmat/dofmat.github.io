@@ -90,9 +90,9 @@ a:focus-visible {
 .portrait {
   display: block;
   width: 8rem;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 68%;
+  object-position: 50% 70%;
   border: 1px solid var(--line);
   border-radius: 0.25rem;
   filter: saturate(0.82) contrast(1.03);
@@ -123,8 +123,30 @@ a:focus-visible {
   font: 0.8125rem ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
+.sidebar nav a::before {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.55rem;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  content: '';
+}
+
+.sidebar nav a[aria-current="location"],
+.mobile-header nav a[aria-current="location"] {
+  color: var(--green);
+}
+
+.sidebar nav a[aria-current="location"]::before {
+  border-color: currentcolor;
+  transform: rotate(-45deg);
+}
+
 .sidebar nav a:hover,
-.sidebar nav a:focus-visible {
+.sidebar nav a:focus-visible,
+.mobile-header nav a:hover,
+.mobile-header nav a:focus-visible {
   color: var(--pink);
 }
 
@@ -478,6 +500,12 @@ footer a {
     padding: 0.65rem 0;
     color: var(--text-tertiary);
     font: 0.8125rem ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+
+  .mobile-header nav a[aria-current="location"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.5rem;
   }
 
   main {

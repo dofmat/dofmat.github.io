@@ -89,7 +89,7 @@ a:focus-visible {
 
 .portrait {
   display: block;
-  width: 8rem;
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 50% 70%;
